@@ -319,22 +319,190 @@
 
   <!-- Contacto -->
   <section id="contact" class="bg-dark">
-    <div class="container-lg text-center">
+    <div class="container-lg">
       <h2 class="section-title">Conectemos | Let's Connect</h2>
-      <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Siempre abierto a nuevas oportunidades y colaboraciones. <br> Always open to new opportunities and collaborations.
+      <p class="text-center" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        ¿Tienes un proyecto en mente? ¿Quieres colaborar? Déjame un mensaje y te responderé lo antes posible.
+        <br>
+        <span style="color: var(--text-light); font-size: 0.95rem;">
+          Got a project in mind? Want to collaborate? Leave me a message and I'll get back to you as soon as possible.
+        </span>
       </p>
-      <div class="social-links mb-4">
-        <a href="https://github.com/monterrosag18" target="_blank" title="GitHub">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
-        <a href="mailto:monterrosag18@gmail.com" title="Email">
-          <i class="fas fa-envelope fa-lg"></i>
-        </a>
+
+      <div class="row g-4">
+        <!-- Columna Izquierda: Información de Contacto -->
+        <div class="col-lg-5">
+          <div class="contact-info-card">
+            <h3 style="color: var(--secondary); margin-bottom: 1.5rem; font-size: 1.5rem;">
+              <i class="fas fa-info-circle"></i> Información de Contacto
+            </h3>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:monterrosamgcol@gmail.com">monterrosamgcol@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <a href="https://github.com/monterrosag18" target="_blank">@monterrosag18</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Ubicación</h4>
+                <p>Colombia</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Disponibilidad</h4>
+                <p>Lunes - Viernes, 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+
+            <div class="social-links mt-4">
+              <a href="https://github.com/monterrosag18" target="_blank" title="GitHub" aria-label="GitHub Profile">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a href="mailto:monterrosamgcol@gmail.com" title="Email" aria-label="Send Email">
+                <i class="fas fa-envelope fa-lg"></i>
+              </a>
+              <a href="https://linkedin.com/in/carlos-monterrosa" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario -->
+        <div class="col-lg-7">
+          <div class="contact-form-card">
+            <form id="contactForm" class="contact-form">
+              <div class="row g-3">
+                <!-- Nombre -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name" class="form-label">
+                      <i class="fas fa-user"></i> Nombre Completo *
+                    </label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="name" 
+                      name="name"
+                      placeholder="Juan Pérez" 
+                      required
+                      aria-required="true"
+                    >
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label">
+                      <i class="fas fa-envelope"></i> Correo Electrónico *
+                    </label>
+                    <input 
+                      type="email" 
+                      class="form-control" 
+                      id="email" 
+                      name="email"
+                      placeholder="juan@ejemplo.com" 
+                      required
+                      aria-required="true"
+                    >
+                  </div>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone" class="form-label">
+                      <i class="fas fa-phone"></i> Teléfono (Opcional)
+                    </label>
+                    <input 
+                      type="tel" 
+                      class="form-control" 
+                      id="phone" 
+                      name="phone"
+                      placeholder="+57 300 123 4567"
+                    >
+                  </div>
+                </div>
+
+                <!-- Asunto -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="subject" class="form-label">
+                      <i class="fas fa-tag"></i> Asunto *
+                    </label>
+                    <select class="form-control" id="subject" name="subject" required aria-required="true">
+                      <option value="">Selecciona un asunto</option>
+                      <option value="proyecto">Propuesta de Proyecto</option>
+                      <option value="colaboracion">Colaboración</option>
+                      <option value="empleo">Oportunidad de Empleo</option>
+                      <option value="consulta">Consulta General</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="message" class="form-label">
+                      <i class="fas fa-comment-dots"></i> Mensaje *
+                    </label>
+                    <textarea 
+                      class="form-control" 
+                      id="message" 
+                      name="message"
+                      rows="6" 
+                      placeholder="Cuéntame sobre tu proyecto o consulta..." 
+                      required
+                      aria-required="true"
+                    ></textarea>
+                    <small class="form-text">Mínimo 10 caracteres</small>
+                  </div>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="col-12">
+                  <button type="submit" class="btn-submit">
+                    <span class="btn-text">
+                      <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </span>
+                    <span class="btn-loading" style="display: none;">
+                      <i class="fas fa-spinner fa-spin"></i> Enviando...
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Mensaje de éxito/error -->
+            <div id="formMessage" class="form-message" style="display: none;"></div>
+          </div>
+        </div>
       </div>
-      <p style="color: var(--text-muted);">
-         monterrosamgcol@gmail.com
-      </p>
     </div>
   </section>
 

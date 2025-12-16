@@ -6,12 +6,13 @@ Mi portafolio web donde muestro mis proyectos y habilidades como desarrollador. 
 
 Este portafolio empezó como un proyecto básico de HTML y CSS, y lo fui mejorando poco a poco mientras aprendía nuevas cosas en Riwi. 
 
-Primero hice la estructura básica, luego le agregué la página de mascotas porque me pareció divertido mostrar algo más personal. Después aprendí sobre Grid y Flexbox y reorganicé todo para que se viera mejor. Al final le metí JavaScript para hacerlo más interactivo.
+Primero hice la estructura básica, luego le agregué la página de mascotas porque me pareció divertido mostrar algo más personal. Después aprendí sobre Grid y Flexbox y reorganicé todo para que se viera mejor. Al final le metí JavaScript para hacerlo más interactivo, y recientemente agregué un formulario de contacto funcional.
 
 ## Lo que tiene
 
 - **Portafolio principal** con mis proyectos de Python y HTML/CSS
 - **Galería de mascotas** con 6 fotos (Max, Luna, Rocky, Bella, Michi y Toby)
+- **Formulario de contacto** con validación en tiempo real
 - **Diseño responsivo** que se adapta a móviles, tablets y desktop
 - **Interactividad con JavaScript**: mensaje de bienvenida, botón que cambia texto, modo claro/oscuro
 - **Animaciones CSS** y efectos hover en las tarjetas
@@ -28,10 +29,11 @@ Primero hice la estructura básica, luego le agregué la página de mascotas por
 
 ```
 portafolio/
-├── index.html       # Página principal
+├── index.html       # Página principal con formulario de contacto
 ├── mascotas.html    # Galería de mascotas
 ├── styles.css       # Todos los estilos
-└── script.js        # Interactividad
+├── script.js        # Interactividad y validaciones
+└── FORMULARIO.md    # Documentación del formulario
 ```
 
 ## Cómo verlo
@@ -50,9 +52,12 @@ portafolio/
 - Media queries para que se vea bien en celular (me costó un poco al principio)
 - JavaScript básico para cambiar cosas en la página cuando haces clic
 - A usar variables CSS en `:root` para no repetir colores
+- Validación de formularios con JavaScript (email, teléfono, mensajes)
+- A guardar datos con localStorage como backup
 
 ## Mejoras recientes
 
+- **Formulario de contacto profesional**: Con validación en tiempo real, guarda los mensajes y muestra confirmación cuando envías
 - Agregué la página de mascotas con 6 fotos
 - Hice todo responsive con media queries
 - Metí JavaScript para que sea más dinámico

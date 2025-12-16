@@ -191,15 +191,15 @@ document.addEventListener('DOMContentLoaded', function() {
       <ul style="color: var(--text-light); list-style: none; padding: 0;">
         <li style="margin-bottom: 8px;">
           <i class="fab fa-linkedin" style="color: var(--accent); width: 25px;"></i>
-          LinkedIn: carlos-monterrosa
+          LinkedIn: aun en construcción
         </li>
         <li style="margin-bottom: 8px;">
           <i class="fab fa-twitter" style="color: var(--accent); width: 25px;"></i>
-          Twitter: @monterrosadev
+          Twitter: me falta
         </li>
         <li style="margin-bottom: 8px;">
           <i class="fab fa-discord" style="color: var(--accent); width: 25px;"></i>
-          Discord: Monterrosa#1234
+          Discord: MONTERROSA
         </li>
       </ul>
     `;
@@ -306,7 +306,207 @@ document.addEventListener('DOMContentLoaded', function() {
   
   
   // ============================================
-  // 8. Log final
+  // 8. Validación y envío del formulario de contacto
+  // ============================================
+  
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    // Obtener elementos del formulario
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const subjectSelect = document.getElementById('subject');
+    const messageTextarea = document.getElementById('message');
+    const submitBtn = contactForm.querySelector('.btn-submit');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    const formMessage = document.getElementById('formMessage');
+    
+    // Validación en tiempo real
+    const validateEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    };
+    
+    const validatePhone = (phone) => {
+      if (!phone) return true; // Opcional
+      const re = /^[\d\s\+\-\(\)]+$/;
+      return re.test(phone) && phone.replace(/\D/g, '').length >= 10;
+    };
+    
+    // Agregar validación visual en tiempo real
+    emailInput.addEventListener('blur', function() {
+      if (this.value && !validateEmail(this.value)) {
+        this.classList.add('is-invalid');
+        this.classList.remove('is-valid');
+      } else if (this.value) {
+        this.classList.add('is-valid');
+        this.classList.remove('is-invalid');
+      }
+    });
+    
+    phoneInput.addEventListener('blur', function() {
+      if (this.value && !validatePhone(this.value)) {
+        this.classList.add('is-invalid');
+        this.classList.remove('is-valid');
+      } else if (this.value) {
+        this.classList.add('is-valid');
+        this.classList.remove('is-invalid');
+      }
+    });
+    
+    messageTextarea.addEventListener('input', function() {
+      if (this.value.length < 10 && this.value.length > 0) {
+        this.classList.add('is-invalid');
+        this.classList.remove('is-valid');
+      } else if (this.value.length >= 10) {
+        this.classList.add('is-valid');
+        this.classList.remove('is-invalid');
+      }
+    });
+    
+    // Manejar envío del formulario
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validar todos los campos
+      let isValid = true;
+      let errors = [];
+      
+      // Validar nombre
+      if (!nameInput.value.trim()) {
+        errors.push('El nombre es requerido');
+        nameInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        nameInput.classList.remove('is-invalid');
+        nameInput.classList.add('is-valid');
+      }
+      
+      // Validar email
+      if (!emailInput.value.trim()) {
+        errors.push('El email es requerido');
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+      } else if (!validateEmail(emailInput.value)) {
+        errors.push('Email inválido');
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        emailInput.classList.remove('is-invalid');
+        emailInput.classList.add('is-valid');
+      }
+      
+      // Validar teléfono (opcional)
+      if (phoneInput.value && !validatePhone(phoneInput.value)) {
+        errors.push('Teléfono inválido');
+        phoneInput.classList.add('is-invalid');
+        isValid = false;
+      }
+      
+      // Validar asunto
+      if (!subjectSelect.value) {
+        errors.push('Selecciona un asunto');
+        subjectSelect.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        subjectSelect.classList.remove('is-invalid');
+        subjectSelect.classList.add('is-valid');
+      }
+      
+      // Validar mensaje
+      if (!messageTextarea.value.trim()) {
+        errors.push('El mensaje es requerido');
+        messageTextarea.classList.add('is-invalid');
+        isValid = false;
+      } else if (messageTextarea.value.trim().length < 10) {
+        errors.push('El mensaje debe tener al menos 10 caracteres');
+        messageTextarea.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        messageTextarea.classList.remove('is-invalid');
+        messageTextarea.classList.add('is-valid');
+      }
+      
+      // Si hay errores, mostrarlos
+      if (!isValid) {
+        showMessage('Por favor, corrige los errores del formulario', 'error');
+        return;
+      }
+      
+      // Simular envío del formulario
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'inline-block';
+      
+      // Recopilar datos del formulario
+      const formData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        phone: phoneInput.value.trim(),
+        subject: subjectSelect.value,
+        message: messageTextarea.value.trim(),
+        timestamp: new Date().toISOString()
+      };
+      
+      // Simular envío (en producción, aquí irías a un backend o servicio como EmailJS)
+      setTimeout(() => {
+        // Guardar en localStorage como backup
+        try {
+          const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+          messages.push(formData);
+          localStorage.setItem('contactMessages', JSON.stringify(messages));
+        } catch (e) {
+          console.error('Error al guardar mensaje:', e);
+        }
+        
+        // Mostrar mensaje de éxito
+        showMessage(
+          '¡Mensaje enviado con éxito! Te responderé lo antes posible a ' + formData.email,
+          'success'
+        );
+        
+        // Resetear formulario
+        contactForm.reset();
+        
+        // Limpiar clases de validación
+        contactForm.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
+          el.classList.remove('is-valid', 'is-invalid');
+        });
+        
+        // Restaurar botón
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline-block';
+        btnLoading.style.display = 'none';
+        
+        // Scroll suave al mensaje
+        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+        // Log para desarrollo
+        console.log('📧 Mensaje recibido:', formData);
+        
+      }, 2000); // Simular delay de red
+    });
+    
+    // Función para mostrar mensajes
+    function showMessage(text, type) {
+      formMessage.textContent = text;
+      formMessage.className = 'form-message ' + type;
+      formMessage.style.display = 'block';
+      
+      // Auto-ocultar después de 8 segundos
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 8000);
+    }
+    
+    console.log('📋 Formulario de contacto inicializado');
+  }
+  
+  
+  // ============================================
+  // 9. Log final
   // ============================================
   
   console.log('✅ Script cargado correctamente');
