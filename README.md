@@ -1,70 +1,58 @@
 # Portafolio Personal - Carlos Monterrosa
 
-Mi portafolio web donde muestro mis proyectos y habilidades como desarrollador. Hecho con HTML, CSS y JavaScript.
+Este es mi portafolio web donde muestro mis proyectos y habilidades como desarrollador. Todo está hecho con HTML y CSS, y algunos proyectos tienen un poco de JavaScript para darles vida.
 
 ## Sobre este proyecto
 
-Este portafolio empezó como un proyecto básico de HTML y CSS, y lo fui mejorando poco a poco mientras aprendía nuevas cosas en Riwi. 
+Empecé con una página sencilla y la he ido mejorando mientras aprendo en Riwi. Ahora tiene varias secciones, proyectos, una galería de mascotas y un formulario de contacto. Todo lo que ves aquí es parte de mi aprendizaje y ganas de crecer como desarrollador.
 
-Primero hice la estructura básica, luego le agregué la página de mascotas porque me pareció divertido mostrar algo más personal. Después aprendí sobre Grid y Flexbox y reorganicé todo para que se viera mejor. Al final le metí JavaScript para hacerlo más interactivo, y recientemente agregué un formulario de contacto funcional.
+## ¿Qué puedes encontrar aquí?
 
-## Lo que tiene
+- Proyectos de HTML y CSS, algunos con JavaScript
+- Proyecto grupal de dioses egipcios (mi parte fue Anubis)
+- Tienda virtual sencilla (solo HTML y CSS)
+- Galería de mascotas (¡con fotos y descripciones!)
+- Formulario de contacto funcional
+- Diseño que se adapta a cualquier pantalla
 
-- **Portafolio principal** con mis proyectos de Python y HTML/CSS
-- **Galería de mascotas** con 6 fotos (Max, Luna, Rocky, Bella, Michi y Toby)
-- **Formulario de contacto** con validación en tiempo real
-- **Diseño responsivo** que se adapta a móviles, tablets y desktop
-- **Interactividad con JavaScript**: mensaje de bienvenida, botón que cambia texto, modo claro/oscuro
-- **Animaciones CSS** y efectos hover en las tarjetas
-
-## Tecnologías
+## Tecnologías principales
 
 - HTML5
 - CSS3 (Grid, Flexbox, Media Queries)
-- JavaScript vanilla
+- Un poco de JavaScript
 - Bootstrap 5
 - Font Awesome
 
-## Estructura de archivos
+## Estructura rápida
 
-```
-portafolio/
-├── index.html       # Página principal con formulario de contacto
-├── mascotas.html    # Galería de mascotas
-├── styles.css       # Todos los estilos
-├── script.js        # Interactividad y validaciones
-└── FORMULARIO.md    # Documentación del formulario
-```
+- index.html — Página principal
+- mascotas.html — Galería de mascotas
+- styles.css — Todos los estilos
+- script.js — Un poco de interactividad
 
-## Cómo verlo
+## ¿Cómo verlo?
 
 1. Clona el repo:
-   ```bash
    git clone https://github.com/monterrosag18/portafolio.git
-   ```
+2. Abre `index.html` en tu navegador o usa Live Server en VS Code
 
-2. Abre `index.html` en tu navegador, o usa Live Server si tienes VS Code
+## ¿Qué he aprendido?
 
-## Lo que aprendí haciendo esto
+- Grid y Flexbox para organizar todo
+- Media queries para que se vea bien en cualquier dispositivo
+- Un poco de JavaScript para detalles interactivos
+- Cómo trabajar en equipo (¡ver el proyecto de dioses egipcios!)
+- Validar formularios y hacerlos más amigables
 
-- A usar Grid para organizar las tarjetas de proyectos y mascotas
-- Flexbox para la navegación y alinear elementos
-- Media queries para que se vea bien en celular (me costó un poco al principio)
-- JavaScript básico para cambiar cosas en la página cuando haces clic
-- A usar variables CSS en `:root` para no repetir colores
-- Validación de formularios con JavaScript (email, teléfono, mensajes)
-- A guardar datos con localStorage como backup
+## Últimos cambios
 
-## Mejoras recientes
-
-- **Formulario de contacto profesional**: Con validación en tiempo real, guarda los mensajes y muestra confirmación cuando envías
-- Agregué la página de mascotas con 6 fotos
-- Hice todo responsive con media queries
-- Metí JavaScript para que sea más dinámico
-- Organicé mejor el CSS con variables
+- Agregué la card de Tienda Riwi (solo HTML y CSS)
+- Agregué el proyecto grupal de dioses egipcios (mi parte fue Anubis)
+- Ahora todos los proyectos HTML/CSS tienen enlace a la web y al código
+- Mejoré la descripción de cada proyecto para que sea más clara
 
 ---
 
-**Carlos Monterrosa** | [@monterrosag18](https://github.com/monterrosag18) | monterrosag18@gmail.com
+**Carlos Monterrosa** | [@monterrosag18](https://github.com/monterrosag18) | monterrosamgcol@gmail.com
 
 *Última actualización: Diciembre 2025*
