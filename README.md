@@ -1,58 +1,55 @@
-# Portafolio Personal - Carlos Monterrosa
+# Portafolio Profesional - Carlos Andres Monterrosa Gallego
 
-Este es mi portafolio web donde muestro mis proyectos y habilidades como desarrollador. Todo está hecho con HTML y CSS, y algunos proyectos tienen un poco de JavaScript para darles vida.
+Portafolio web personal enfocado en presentar mi perfil como desarrollador en formacion con ruta hacia C#/.NET, backend, SQL y experiencias interactivas.
 
-## Sobre este proyecto
+## Objetivo
 
-Empecé con una página sencilla y la he ido mejorando mientras aprendo en Riwi. Ahora tiene varias secciones, proyectos, una galería de mascotas y un formulario de contacto. Todo lo que ves aquí es parte de mi aprendizaje y ganas de crecer como desarrollador.
+Mostrar de forma clara mi informacion profesional, proyectos destacados, tecnologias principales y datos de contacto para oportunidades junior, practicas o primeras experiencias reales en desarrollo de software.
 
-## ¿Qué puedes encontrar aquí?
+## Enfoque del perfil
 
-- Proyectos de HTML y CSS, algunos con JavaScript
-- Proyecto grupal de dioses egipcios (mi parte fue Anubis)
-- Tienda virtual sencilla (solo HTML y CSS)
-- Galería de mascotas (¡con fotos y descripciones!)
-- Formulario de contacto funcional
-- Diseño que se adapta a cualquier pantalla
+- C#/.NET como ruta principal de especializacion.
+- Backend, APIs, SQL y logica de negocio.
+- JavaScript, HTML y CSS para interfaces web.
+- Unity y gamificacion como parte de mi interes por experiencias interactivas.
+- Mentalidad de estrategia inspirada en juegos como Age of Empires: planear, avanzar por etapas y no rendirse.
 
-## Tecnologías principales
+## Proyectos destacados
 
-- HTML5
-- CSS3 (Grid, Flexbox, Media Queries)
-- Un poco de JavaScript
-- Bootstrap 5
-- Font Awesome
+| Proyecto | Descripcion | Tecnologias |
+| --- | --- | --- |
+| [Tickets API](https://github.com/monterrosag18/tickets-api) | API REST para tickets tecnicos, dispositivos, autenticacion, logs, alertas y monitoreo. | Laravel, SQL Server, Docker, Sanctum |
+| [Nexus Riwi](https://github.com/monterrosag18/Nexus-Riwi) | Plataforma educativa gamificada con autenticacion, realtime y mecanicas de progreso. | Next.js, React, Supabase |
+| [Delivery Ops SQL](https://github.com/monterrosag18/crudactivity-sql-cdo) | Modelo relacional para operaciones de entrega y consultas de datos. | PostgreSQL, SQL |
+| [HabitFlow](https://github.com/monterrosag18/HabitFlow) | Aplicacion de habitos con interacciones en cliente y persistencia local. | JavaScript, DOM, LocalStorage |
 
-## Estructura rápida
+## Tecnologias
 
-- index.html — Página principal
-- mascotas.html — Galería de mascotas
-- styles.css — Todos los estilos
-- script.js — Un poco de interactividad
+- C#/.NET
+- ASP.NET Core
+- SQL
+- JavaScript
+- HTML
+- CSS
+- Unity
+- Git
 
-## ¿Cómo verlo?
+## Estructura
 
-1. Clona el repo:
-   git clone https://github.com/monterrosag18/portafolio.git
-2. Abre `index.html` en tu navegador o usa Live Server en VS Code
+```txt
+.
++-- index.html
++-- styles.css
++-- script.js
++-- README.md
+```
 
-## ¿Qué he aprendido?
+## Uso local
 
-- Grid y Flexbox para organizar todo
-- Media queries para que se vea bien en cualquier dispositivo
-- Un poco de JavaScript para detalles interactivos
-- Cómo trabajar en equipo (¡ver el proyecto de dioses egipcios!)
-- Validar formularios y hacerlos más amigables
+Abre `index.html` directamente en el navegador o usa una extension como Live Server en VS Code.
 
-## Últimos cambios
+## Contacto
 
-- Agregué la card de Tienda Riwi (solo HTML y CSS)
-- Agregué el proyecto grupal de dioses egipcios (mi parte fue Anubis)
-- Ahora todos los proyectos HTML/CSS tienen enlace a la web y al código
-- Mejoré la descripción de cada proyecto para que sea más clara
-
----
-
-**Carlos Monterrosa** | [@monterrosag18](https://github.com/monterrosag18) | monterrosamgcol@gmail.com
-
-*Última actualización: Diciembre 2025*
+- Email: [monterrosamgcol@gmail.com](mailto:monterrosamgcol@gmail.com)
+- LinkedIn: [Carlos Andres Monterrosa Gallego](https://www.linkedin.com/in/carlos-andres-monterrosa-gallego/)
+- GitHub: [@monterrosag18](https://github.com/monterrosag18)
